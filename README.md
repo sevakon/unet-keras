@@ -82,7 +82,7 @@ img_size = (img_height, img_width)
 train_path = ''       # full path to the folder with training data
 test_path = ''        # full path to the folder with testing data
 save_path = ''        # full path to the folder to save results on testing data
-model_name = 'unet_model.hdf5     # how to name your model save
+model_name = 'unet_model.hdf5'     # how to name your model save
 model_weights_name = 'unet_weight_model.hdf5'
 ```
 
