@@ -23,7 +23,7 @@ if __name__ == "__main__":
     model_checkpoint = unet.checkpoint(model_name)
 
     # model training
-    unet.fit_generator(train_gen, steps_per_epoch=300,epochs=1, callbacks=[model_checkpoint])
+    unet.fit_generator(train_gen, steps_per_epoch = 300, epochs = 1, callbacks=[model_checkpoint])
 
     # generated testing set
     test_gen = test_generator(test_path, 30, img_size)
