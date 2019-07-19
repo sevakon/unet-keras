@@ -46,15 +46,15 @@ pip install scikit-image             # installs skimage
 ```
 
 ## Instructions
-- All the data preparation happens is data.py file. 
-- Data augmentation can be added to ImageDataGenerator parameters
+All the data preparation happens is data.py file. 
+Data augmentation can be added to ImageDataGenerator parameters
 
 ```py
     image_datagen = ImageDataGenerator(rescale=1. / 255)      # add data augmentation here
     mask_datagen = ImageDataGenerator(rescale=1. / 255)       # as function parameter
 ```
 
-- Note that your data should be structures like this:
+Note that your data should be structures like this:
 
     .
     ├── train_path
@@ -70,10 +70,11 @@ pip install scikit-image             # installs skimage
     │       ├── 1.jpg      
     │       ├── 2.jpg
     │       └── ...    
-    └── save_path               # where results of tests will be saved
+    ├── save_path               # where results of tests will be saved
+    └── ...
+
   
-    
-- Define your config in main.py file
+Define your config in main.py file
 ```py
 img_height =          # set your image resolution (512x512 or 256X256 recommended)
 img_width =           # every image from your dataset will be resacled
@@ -85,7 +86,7 @@ model_name = 'unet_model.hdf5     # how to name your model save
 model_weights_name = 'unet_weight_model.hdf5'
 ```
 
-- Run main.py script to generate data, fit model and predict results
+Run main.py script to generate data, fit model and predict results
 
 ## Results
 
