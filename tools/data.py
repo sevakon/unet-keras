@@ -10,8 +10,15 @@ import skimage.transform as trans
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-def train_generator(batch_size, train_path, image_folder, mask_folder, target_size, image_color_mode = 'grayscale',
-    mask_color_mode = 'grayscale'):
+def train_generator(
+    batch_size,
+    train_path,
+    image_folder,
+    mask_folder,
+    target_size,
+    image_color_mode = 'grayscale',
+    mask_color_mode = 'grayscale'
+):
     """ Image Data Generator
     Function that generates batches of data (img, mask) for training from specified folder
     returns images with specified pixel size
@@ -27,7 +34,8 @@ def train_generator(batch_size, train_path, image_folder, mask_folder, target_si
         color_mode = image_color_mode,
         target_size = target_size,
         batch_size = batch_size,
-        seed = 1)
+        seed = 1
+    )
     mask_generator = mask_datagen.flow_from_directory(
         train_path,
         classes = [mask_folder],
@@ -35,12 +43,19 @@ def train_generator(batch_size, train_path, image_folder, mask_folder, target_si
         color_mode = mask_color_mode,
         target_size = target_size,
         batch_size = batch_size,
-        seed = 1)
+        seed = 1
+    )
     train_generator = zip(image_generator, mask_generator)
     for (img,mask) in train_generator:
+        mask = normalize_mask(mask)
         yield (img,mask)
 
-def test_generator(test_path, num_images, target_size, as_gray = True):
+def test_generator(
+    test_path,
+    num_images,
+    target_size,
+    as_gray = True
+):
     """ Image Data Generator
     Function that generates batches od data for testing from specified folder
     returns images with specified pixel size
@@ -53,6 +68,25 @@ def test_generator(test_path, num_images, target_size, as_gray = True):
         img = np.reshape(img,(1,)+img.shape)
         yield img
 
-def save_results(save_path, npyfile, num_class = 2):
+def normalize_mask(mask):
+    """ Mask Normalization
+    Function that returns normalized mask
+    Each pixel is either 0å or 1
+    """
+    mask[mask > 0.5] = 1
+    mask[mask <= 0.5] = 0
+    return mask
+
+def save_results(
+    save_path,
+    npyfile,
+    num_class = 2
+):
+    """ Save Results
+    Function that takes predictions from U-Net model
+    and saves them to specified folder.
+    """
     for i,item in enumerate(npyfile):
-        io.imsave(os.path.join(save_path,"%d_predict.png"%i),item)
+        img = normalize_mask(item)
+        # TODO: fix lossy conversion here (float32 to uint8)
+        io.imsave(os.path.join(save_path,"%d_predict.png"%i),img)
