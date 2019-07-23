@@ -29,11 +29,18 @@ After installing the Python 3.7 version of [Anaconda](https://www.anaconda.com/d
 ```sh
 git clone https://github.com/sevakon/unet-keras.git
 ```
-Create and activate a tensorflow virtual environment:
+Create and activate a tensorflow virtual environment (no GPU support):
 ```sh
 conda create -n tensorflow_env tensorflow
 conda avtivate tensorflow_env
 ```
+
+Alternatively, create a tensorflow virtual environment with GPU support:
+```sh
+conda create --name tf_gpu tensorflow-gpu 
+conda avtivate tf_gpu
+```
+
 Install other packages to the virtual environment:
 ```sh
 conda install -c conda-forge keras   # installs Keras
