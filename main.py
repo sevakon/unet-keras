@@ -1,5 +1,5 @@
 from model.unet import UNet
-from tools.data import train_generator, test_generator, save_results
+from tools.data import train_generator, test_generator, save_results, is_file
 
 # TODO: move to config .json files
 img_height = 512
@@ -22,11 +22,17 @@ if __name__ == "__main__":
         target_size = img_size
     )
 
+    # check if ptratrained weights are defined
+    if is_file(file_name=model_weights_name):
+        pretrained_weights = model_weights_name
+    else:
+        pretrained_weights = None
+
     # build model
     unet = UNet(
         input_size = (img_width,img_height,1),
         n_filters = 64,
-        pretrained_weights = model_weights_name
+        pretrained_weights = pretrained_weights
     )
     unet.build()
 
@@ -42,7 +48,7 @@ if __name__ == "__main__":
         epochs = 5,
         callbacks = [model_checkpoint]
     )
-    
+
     # saving model weights
     unet.save_model(model_weights_name)
 
@@ -52,5 +58,3 @@ if __name__ == "__main__":
     # display results
     results = unet.predict_generator(test_gen,30,verbose=1)
     save_results(save_path, results)
-
-
