@@ -102,6 +102,8 @@ Testing results were satisfactory
 Sample | Prediction
 :-------------:|:-------------:
 <img src="https://i.ibb.co/PYWQ5my/28.jpg">|<img src="https://i.ibb.co/5MWMRXH/28-predict.png">
+<img src="https://i.ibb.co/8n3RZCm/6.jpg">|<img src="https://i.ibb.co/r5WWjJ9/6-predict.png">
+<img src="https://i.ibb.co/hfrLpVY/4.jpg">|<img src="https://i.ibb.co/GPtgBpq/4-predict.png">
 
 ## About Keras
 
