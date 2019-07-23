@@ -22,7 +22,6 @@ if __name__ == "__main__":
         target_size = img_size
     )
 
-
     # build model
     unet = UNet(
         input_size = (img_width,img_height,1),
