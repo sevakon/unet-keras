@@ -22,7 +22,7 @@ if __name__ == "__main__":
         target_size = img_size
     )
 
-    # check if ptratrained weights are defined
+    # check if pretrained weights are defined
     if is_file(file_name=model_weights_name):
         pretrained_weights = model_weights_name
     else:
