@@ -10,7 +10,12 @@ class UNet(Model):
     Build function is also defined for model compilation and summary
     checkpoint returns a ModelCheckpoint for best model fitting
     """
-    def __init__(self, input_size, n_filters):
+    def __init__(
+        self,
+        input_size,
+        n_filters,
+        pretrained_weights = None
+    ):
         # define input layer
         input = input_tensor(input_size)
 
@@ -51,6 +56,10 @@ class UNet(Model):
 
         # initialize Keras Model with defined above input and output layers
         super(UNet, self).__init__(inputs = input, outputs = output)
+        
+        # load preatrained weights
+        if pretrained_weights:
+            self.load_weights(pretrained_weights)
 
     def build(self):
         self.compile(optimizer=Adam(), loss="binary_crossentropy", metrics=["accuracy"])
