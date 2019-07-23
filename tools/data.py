@@ -91,7 +91,9 @@ def save_results(
         # TODO: fix lossy conversion here (float32 to uint8)
         io.imsave(os.path.join(save_path,"%d_predict.png"%i),img)
 
-def is_file(file_name) -> bool:
+def is_file(
+    file_name
+) -> bool:
     """ Is File
     Check if file exists
     Later used to check if user has pretrained models
