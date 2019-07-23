@@ -96,6 +96,12 @@ model_weights_name = 'unet_weight_model.hdf5'
 Run main.py script to generate data, fit model and predict results
 
 ## Results
+After 30 epochs, accuracy of 98% was reached on a training set of 528 bone images. 
+Testing results were satisfactory
+
+Sample | Prediction
+:-------------:|:-------------:
+<img src="https://i.ibb.co/PYWQ5my/28.jpg">|<img src="https://i.ibb.co/5MWMRXH/28-predict.png">
 
 ## About Keras
 
