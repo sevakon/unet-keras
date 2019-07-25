@@ -96,7 +96,7 @@ model_weights_name = 'unet_weight_model.hdf5'
 Run main.py script to generate data, fit model and predict results
 
 ## Results
-After 30 epochs, accuracy of 98% was reached on a training set of 528 bone images. 
+After 10 epochs, accuracy of 98% was reached on a training set of 528 bone images. 
 Testing results were satisfactory
 
 Sample | Prediction
