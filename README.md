@@ -96,11 +96,35 @@ model_name = 'unet_model.hdf5'     # how to name your model save
 model_weights_name = 'unet_weight_model.hdf5'
 ```
 
-Run main.py script to generate data, fit model and predict results
+## Model Training
+To start training your model, run main.py script. 
+All the samples in the dataset will be first made square with black paddings added at random.
+Then the samples are pushed into training/testing generators, the pretrained weights (if defined) are loaded into the model, and the fitting process begins. At the end of the training, testing samples are predicted to see how well your model behaves on real data. If further training is required, run main.py script again, commenting prepare_dataset function since the dataset was already prepared during the first training.
+
+
+## Model Predict
+To predict results with the already trained model, run predict.py script:
+
+```py
+python predict.py n
+```
+where n is the number of samples that await prediction. Please note that testing samples must be structured like so:
+
+    .
+    ├── data
+    │   ├── test               # testing images
+    │   │   ├── 1.jpg          # must have names of             
+    │   │   ├── 2.jpg          # ascending numbers from 1-to-n     
+    │   │   └── ...    
+    │   └── results            # predicted masks 
+    ├── predict.py             # script
+    ├── weight.hdf5            # file with the weights     
+    └── ...
+
 
 ## Results
 After 10 epochs, accuracy of 98% was reached on a training set of 528 bone images. 
-Testing results were satisfactory
+After 95 epochs, reached accuracy was 99.7%.
 Please check [images](https://github.com/sevakon/unet-keras/tree/master/images) folder to see all the sample-prediction pairs, below are only a few 
 
 Sample | Prediction
