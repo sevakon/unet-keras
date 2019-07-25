@@ -1,14 +1,57 @@
 from keras.preprocessing.image import ImageDataGenerator
+from tools.image import square_image, reshape_image, normalize_mask, show_image
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-import numpy as np
-import time
-import os
-import glob
 import skimage.io as io
-import skimage.transform as trans
+import numpy as np
+import os
+import random
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
+def prepare_dataset(
+    path_to_data,
+    image_folder,
+    mask_folder,
+    n_samples,
+    as_gray = True
+):
+    """ Prepare Dataset
+    Function that takes path to DataSet folder
+    which has image and mask folder
+    Each image and mask are transformed to square formats:
+    reads both image and mask, creates new image and mask;
+    generates random spacing coefficient,
+    adds original image and paddings to them to make them square,
+    then saves new masks and images and delets originals
+    """
+    path_to_image = os.path.join(path_to_data, image_folder)
+    path_to_mask = os.path.join(path_to_data, mask_folder)
+
+    for i in range(1, n_samples + 1):
+        try:
+            img_name = os.path.join(path_to_image,"%d.jpg"%i)
+            mask_name = os.path.join(path_to_mask, "%d.png"%i)
+
+            coefficient = random.uniform(0, 2)
+
+            img = io.imread(fname = img_name, as_gray = as_gray)
+            os.remove(img_name)
+            new_img = square_image(img, random = coefficient)
+            new_img = (new_img * 255).astype('uint8')
+            io.imsave(fname = img_name, arr = new_img)
+
+            mask = io.imread(fname = mask_name,as_gray = as_gray)
+            os.remove(mask_name)
+            new_mask = square_image(mask, random = coefficient)
+            new_mask = (new_mask * 255).astype('uint8')
+            io.imsave(fname = mask_name, arr = new_mask)
+
+            print("Successfully added paddings to image and mask #%d"%i)
+        except:
+            print("Adding paddings failed at #%d"%i)
+
+    print("All images and masks were resized to SQUARE format")
 
 def train_generator(
     batch_size,
@@ -20,9 +63,9 @@ def train_generator(
     mask_color_mode = 'grayscale'
 ):
     """ Image Data Generator
-    Function that generates batches of data (img, mask) for training from specified folder
-    returns images with specified pixel size
-    does preprocessing (normalization to 0-1)
+    Function that generates batches of data (img, mask) for training
+    from specified folder. Returns images with specified pixel size
+    Does preprocessing (normalization to 0-1)
     """
     # no augmentation, only rescaling
     image_datagen = ImageDataGenerator(rescale=1. / 255)
@@ -58,24 +101,15 @@ def test_generator(
 ):
     """ Image Data Generator
     Function that generates batches od data for testing from specified folder
-    returns images with specified pixel size
-    does preprocessing (normalization to 0-1)
+    Reads images as grey, makes them square, scales them
+    Returns images with specified pixel size
+    Does preprocessing (normalization to 0-1)
     """
     for i in range(1, num_images + 1):
         img = io.imread(os.path.join(test_path,"%d.jpg"%i),as_gray = as_gray)
-        img = trans.resize(img,target_size)
-        img = np.reshape(img,img.shape+(1,))
-        img = np.reshape(img,(1,)+img.shape)
+        img = square_image(img)
+        img = reshape_image(img, target_size)
         yield img
-
-def normalize_mask(mask):
-    """ Mask Normalization
-    Function that returns normalized mask
-    Each pixel is either 0å or 1
-    """
-    mask[mask > 0.5] = 1
-    mask[mask <= 0.5] = 0
-    return mask
 
 def save_results(
     save_path,
@@ -88,8 +122,8 @@ def save_results(
     """
     for i,item in enumerate(npyfile):
         img = normalize_mask(item)
-        # TODO: fix lossy conversion here (float32 to uint8)
-        io.imsave(os.path.join(save_path,"%d_predict.png"%i),img)
+        img = (img * 255).astype('uint8')
+        io.imsave(os.path.join(save_path,"%d_predict.png"%(i+1)),img)
 
 def is_file(
     file_name
