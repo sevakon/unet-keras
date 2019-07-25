@@ -106,6 +106,8 @@ Sample | Prediction
 :--------------:|:--------------:
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/11.jpg" width="406" height="512">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/11_predict.png"  width="512" height="512">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/13.jpg" width="406" height="512">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/13_predict.png" width="512" height="512">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/5.jpg" width="406" height="512">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/5_predict.png"  width="512" height="512">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/13.jpg" width="406" height="512">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/13_predict.png" width="512" height="512">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/16.jpg" width="349" height="512">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/16_predict.png" width="512" height="512">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/17.jpg" width="327" height="512">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/17_predict.png" width="512" height="512">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/18.jpg" width="440" height="512">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/18_predict.png" width="512" height="512">
