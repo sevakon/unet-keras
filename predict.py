@@ -10,10 +10,10 @@ save_path = 'data/results'
 model_weights_name = 'unet_bones_weights.hdf5'
 
 if __name__ == "__main__":
-    """ Validation Script
+    """ Prediction Script
     Run this Python script with a command line
     argument that defines number of test samples
-    e.g. python val.py 6
+    e.g. python predict.py 6
     Note that test samples names should be:
     1.jpg, 2.jpg, 3.jpg ...
     """
