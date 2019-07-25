@@ -106,6 +106,7 @@ Please check [images](https://github.com/sevakon/unet-keras/tree/master/images) 
 Sample | Prediction
 :--------------:|:--------------:
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/11.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/11_predict.png"  width="256" height="256">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/1.jpg" width="256" height="203">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/1_predict.png"  width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/13.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/13_predict.png" width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/5.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/5_predict.png"  width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/16.jpg" width="175" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/16_predict.png" width="256" height="256">
