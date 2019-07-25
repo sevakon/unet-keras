@@ -104,9 +104,23 @@ Testing results were satisfactory
 
 Sample | Prediction
 :-------------:|:-------------:
-<img src="https://i.ibb.co/PYWQ5my/28.jpg">|<img src="https://i.ibb.co/5MWMRXH/28-predict.png">
-<img src="https://i.ibb.co/8n3RZCm/6.jpg">|<img src="https://i.ibb.co/r5WWjJ9/6-predict.png">
-<img src="https://i.ibb.co/hfrLpVY/4.jpg">|<img src="https://i.ibb.co/GPtgBpq/4-predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/11.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/11_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/13.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/13_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/16.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/16_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/17.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/17_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/18.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/18_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/19.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/19_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/20.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/20_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/21.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/21_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/22.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/22_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/23.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/23_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/24.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/24_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/25.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/25_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/26.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/26_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/29.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/29_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/6.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/6_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/7.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/7_predict.png">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/9.jpg">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/9_predict.png">
 
 ## About Keras
 
