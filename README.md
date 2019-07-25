@@ -111,6 +111,7 @@ Sample | Prediction
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/5.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/5_predict.png"  width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/16.jpg" width="175" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/16_predict.png" width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/17.jpg" width="164" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/17_predict.png" width="256" height="256">
+<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/2.jpg" width="256" height="195">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/2_predict.png"  width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/18.jpg" width="220" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/18_predict.png" width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/19.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/19_predict.png" width="256" height="256">
 <img src="https://github.com/sevakon/unet-keras/blob/master/images/img/20.jpg" width="184" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/20_predict.png" width="256" height="256">
