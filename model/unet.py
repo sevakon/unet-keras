@@ -71,3 +71,6 @@ class UNet(Model):
     @staticmethod
     def checkpoint(name):
         return callback(name)
+    
+# TODO: FIX SAVING MODEL: AT THIS POINT, ONLY SAVING MODEL WEIGHTS IS AVAILBILE
+# SINCE SUBSCLASSING FROM KERAS.MODEL RESTRICTS SAVING MODEL AS AN HDF5 FILE
