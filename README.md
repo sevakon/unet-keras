@@ -64,7 +64,7 @@ Data augmentation can be added to ImageDataGenerator parameters
     mask_datagen = ImageDataGenerator(rescale=1. / 255)       # as function parameter
 ```
 
-Note that your data should be structures like this:
+Note that your data should be structured like this:
 
     .
     ├── train_path
