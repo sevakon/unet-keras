@@ -1,5 +1,5 @@
 from model.unet import UNet
-from tools.data import train_generator, test_generator, save_results, is_file
+from tools.data import train_generator, test_generator, save_results, is_file, prepare_dataset, show_image
 
 # TODO: move to config .json files
 img_height = 512
@@ -12,7 +12,16 @@ model_name = 'unet_model.hdf5'
 model_weights_name = 'unet_weight_model.hdf5'
 
 if __name__ == "__main__":
-
+    
+    # prepares dataset: makes all not-square images square, adding paddings
+    # make sure it is run ONCE AND ONLY ONCE!
+    prepare_dataset(
+        path_to_data = train_path,
+        image_folder = 'img',
+        mask_folder = 'mask',
+        n_samples = 528
+    )
+    
     # generates training set
     train_gen = train_generator(
         batch_size = 2,
@@ -36,7 +45,7 @@ if __name__ == "__main__":
     )
     unet.build()
 
-    # createting a callback, hence best weights configurations will be saved
+    # creating a callback, hence best weights configurations will be saved
     model_checkpoint = unet.checkpoint(model_name)
 
     # model training
