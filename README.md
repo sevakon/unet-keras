@@ -125,7 +125,7 @@ where n is the number of samples that await prediction. Please note that testing
 
 ## Results
 After 10 epochs, accuracy of 98% was reached on a training set of 528 bone images. 
-After 95 epochs, reached accuracy was 99.7%.
+After 100 epochs, reached accuracy was 99.7%.
 Please check [images](https://github.com/sevakon/unet-keras/tree/master/images) folder to see all the sample-prediction pairs, below are only a few 
 
 Sample | Prediction
