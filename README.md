@@ -50,10 +50,10 @@ Install other packages to the virtual environment:
 conda install -c conda-forge keras   # installs Keras
 ```
 ```sh
-pip install matplotlib               # installs matpoltlib
+conda install matplotlib               # installs matpoltlib
 ```
 ```sh
-pip install scikit-image             # installs skimage
+conda install scikit-image             # installs skimage
 ```
 
 ## Instructions
