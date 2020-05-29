@@ -123,31 +123,7 @@ where n is the number of samples that await prediction. Please note that testing
     └── ...
 
 
-## Results
-After 10 epochs, accuracy of 98% was reached on a training set of 528 bone images. 
-After 100 epochs, reached accuracy was 99.7%.
-Please check [images](https://github.com/sevakon/unet-keras/tree/master/images) folder to see all the sample-prediction pairs, below are only a few 
 
-Sample | Prediction
-:--------------:|:--------------:
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/11.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/11_predict.png"  width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/1.jpg" width="256" height="203">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/1_predict.png"  width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/13.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/13_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/5.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/5_predict.png"  width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/16.jpg" width="175" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/16_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/17.jpg" width="164" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/17_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/2.jpg" width="256" height="195">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/2_predict.png"  width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/18.jpg" width="220" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/18_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/19.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/19_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/20.jpg" width="184" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/20_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/21.jpg" width="204" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/21_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/3.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/3_predict.png"  width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/22.jpg" width="164" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/22_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/24.jpg" width="203" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/24_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/25.jpg" width="204" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/25_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/26.jpg" width="167" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/26_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/29.jpg" width="124" height="256">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/29_predict.png" width="256" height="256">
-<img src="https://github.com/sevakon/unet-keras/blob/master/images/img/7.jpg" width="256" height="212">|<img src="https://github.com/sevakon/unet-keras/blob/master/images/mask/7_predict.png" width="256" height="256">
 
 ## About Keras
 
